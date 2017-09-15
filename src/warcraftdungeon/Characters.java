@@ -7,7 +7,8 @@ package warcraftdungeon;
 
 /**
  *
- * @author areym01
+ * @author Alberto Rey Moreno
+ * Endless Pre-Alpha v1.00
  */
 public class Characters {
 
@@ -62,7 +63,7 @@ public class Characters {
 		this.life = life;
 	}
 
-	public void mostrarPJ() {
+	public void showCH() {
 
 		System.out.println("--- HOJA DE PERSONAJE ---");
 		System.out.println("name: " + this.getName());
@@ -109,3 +110,4 @@ public class Characters {
 	
 
 }
+
