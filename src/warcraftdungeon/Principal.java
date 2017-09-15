@@ -9,11 +9,12 @@ import java.util.Scanner;
 
 /**
  *
- * @author areym01
+ * @author Alberto Rey Moreno
+ * Endless Pre-Alpha v1.00
  */
 public class Principal {
 
-    public static String pedirNombre() {
+    public static String askName() {
         Scanner entrada = new Scanner(System.in);
         return entrada.nextLine();
     }
@@ -21,17 +22,17 @@ public class Principal {
     public static void main(String[] args) {
 
         System.out.println("Ingrese el nombre del primer personaje: ");
-        Characters pj1 = new Characters(pedirNombre());
-        pj1.mostrarPJ();
+        Characters ch1 = new Characters(askName());
+        ch1.showCH();
         System.out.println("Ingrese el nombre del segundo personaje: ");
-        Characters pj2 = new Characters(pedirNombre());
-        pj2.mostrarPJ();
+        Characters ch2 = new Characters(askName());
+        ch2.showCH();
 
-        while ((pj1.beAlive() == true) && (pj2.beAlive())) {
+        while ((ch1.beAlive() == true) && (ch2.beAlive())) {
 
-            pj1.ataca(pj2);
-            if (pj2.beAlive() == true) {
-                pj2.ataca(pj1);
+            ch1.ataca(ch2);
+            if (ch2.beAlive() == true) {
+                ch2.ataca(ch1);
             }
 
         }
